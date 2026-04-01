@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Dashboard</h1>
+
+<div class="controls">
+
+<input type="text" id="search" placeholder="Search student...">
+
+<select id="courseFilter">
+<option value="">All Courses</option>
+<option value="CS">CS</option>
+<option value="AI">AI</option>
+<option value="ML">ML</option>
+</select>
+
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th onclick="sortTable('name')">Name</th>
+<th onclick="sortTable('course')">Course</th>
+<th onclick="sortTable('attendance')">Attendance</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+<div id="emptyState" class="empty" style="display:none;">
+No students found
+</div>
+
+<div class="pagination">
+
+<button onclick="prevPage()">Prev</button>
+<span id="pageInfo"></span>
+<button onclick="nextPage()">Next</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
